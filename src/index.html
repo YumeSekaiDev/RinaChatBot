@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rina Tennoji // Rina-chan Board Voice Chat</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- App Container -->
+  <div id="app" class="app-layout">
+    
+    <!-- Top Cute Header -->
+    <header class="top-header">
+      <div class="brand">
+        <!-- Rina-chan Board Head Icon with Cat Ears -->
+        <div class="rina-board-mini" id="rina-board-icon">
+          <div class="ear ear-left"></div>
+          <div class="ear ear-right"></div>
+          <div class="board-screen">
+            <span class="board-face-mini" id="header-face">(・ω・)</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <h1>Rina Tennoji <span class="heart-sparkle">♥</span></h1>
+          <span class="subtext">RINA-CHAN BOARD VOICE ASSISTANT</span>
+        </div>
+      </div>
+
+      <!-- Realtime Status Indicator (Cute Rina-chan Board State) -->
+      <div class="status-indicator-wrap">
+        <div id="status-pill" class="status-pill state-ready">
+          <span class="status-heart">♥</span>
+          <span id="status-label" class="status-label">BOARD: READY!</span>
+          <div class="status-visualizer" id="status-visualizer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Cute Action Buttons -->
+      <div class="header-actions">
+        <button id="btn-export" class="icon-btn" title="Export conversation transcript">
+          <span class="btn-emoji">📄</span>
+          <span class="btn-text">Diary</span>
+        </button>
+        <button id="btn-clear" class="icon-btn danger-hover" title="Clear chat history">
+          <span class="btn-emoji">🧹</span>
+          <span class="btn-text">Clear</span>
+        </button>
+        <button id="btn-settings-open" class="icon-btn" title="Open Settings">
+          <span class="btn-emoji">⚙️</span>
+          <span class="btn-text">Settings</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Global Alert Banner (Ollama offline or warnings) -->
+    <div id="global-alert" class="global-alert hidden">
+      <div class="alert-content">
+        <span class="alert-emoji">⚠️</span>
+        <span id="alert-message">Ollama is not running. Run 'ollama serve'</span>
+      </div>
+      <div class="alert-actions" id="alert-actions">
+        <button id="alert-action-btn" class="alert-btn">Pull qwen2.5:0.5b</button>
+        <button id="alert-dismiss-btn" class="alert-close">✕</button>
+      </div>
+    </div>
+
+    <!-- Main Chat Messages Display -->
+    <main class="chat-viewport">
+      <div id="messages-container" class="messages-container">
+        
+        <!-- Super Cute Hero / Empty State Card -->
+        <div id="hero-welcome" class="hero-welcome">
+          <!-- Big Animated Rina-chan Board -->
+          <div class="rina-hero-board">
+            <div class="hero-ear hero-ear-left"></div>
+            <div class="hero-ear hero-ear-right"></div>
+            <div class="hero-screen">
+              <div class="hero-face" id="hero-face">( ≧ᗜ≦ )</div>
+              <div class="hero-board-caption" id="hero-caption">Rina-chan Board: "Egao (Smile)!"</div>
+            </div>
+            <div class="sparkle s1">✨</div>
+            <div class="sparkle s2">🌸</div>
+            <div class="sparkle s3">⭐</div>
+          </div>
+
+          <h2>Konnichiwa! I'm Rina Tennoji!</h2>
+          <p class="hero-desc">Your 100% private, cute local AI friend running on your laptop. Let's talk together! ♪</p>
+          
+          <div class="quick-hints-grid">
+            <div class="hint-card">
+              <div class="hint-icon">🎤</div>
+              <div class="hint-title">Hold SPACEBAR</div>
+              <div class="hint-text">Hold Space to talk to Rina, release to send!</div>
+            </div>
+            <div class="hint-card">
+              <div class="hint-icon">⚡</div>
+              <div class="hint-title">0.5B Laptop Mode</div>
+              <div class="hint-text">Powered by Qwen 2.5 0.5B for lightning-fast replies!</div>
+            </div>
+            <div class="hint-card">
+              <div class="hint-icon">🌸</div>
+              <div class="hint-title">Rina-chan Board!</div>
+              <div class="hint-text">Expresses feelings with cute animated faces & voices!</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Bottom Cute Control Deck -->
+    <footer class="bottom-dock">
+      
+      <!-- Big Cute Talk Button with Heart Halo -->
+      <div class="talk-button-wrapper">
+        <button id="btn-talk" class="btn-talk" title="Click to speak with Rina (or hold Spacebar)">
+          <div class="cute-pulse-ring"></div>
+          <div class="talk-face" id="btn-talk-face">(=^･ω･^=)</div>
+          <svg class="mic-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </button>
+        <div class="spacebar-badge" title="Hold Spacebar anywhere to talk">
+          <kbd>SPACE</kbd> Hold to talk to Rina-chan!
+        </div>
+      </div>
+
+      <!-- Quick Action Controls & Hybrid Text Chat Bar -->
+      <div class="dock-controls-bar">
+        <!-- Stop Speaking Button -->
+        <button id="btn-stop-speech" class="action-btn stop-btn" title="Stop speaking">
+          <span class="btn-emoji">🤫</span>
+          <span>Shh, Rina</span>
+        </button>
+
+        <!-- Hybrid Text Input Form -->
+        <form id="text-chat-form" class="text-chat-form">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Type a cute message to Rina-chan... (or use mic!)" 
+            autocomplete="off"
+          />
+          <button type="submit" id="btn-send-text" class="btn-send" title="Send message to Rina">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Volume Controller -->
+        <div class="volume-control-wrap">
+          <span class="volume-emoji">🔊</span>
+          <input type="range" id="quick-volume" min="0" max="1" step="0.05" value="1.0" title="Output Volume">
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cute Settings Modal -->
+    <div id="settings-modal" class="modal-backdrop hidden">
+      <div class="modal-card">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <span class="modal-emoji">🎀</span>
+            <h3>Rina-chan Board Settings</h3>
+          </div>
+          <button id="btn-settings-close" class="modal-close" title="Close settings">✕</button>
+        </div>
+
+        <!-- Modal Tabs -->
+        <div class="modal-tabs">
+          <button class="tab-btn active" data-tab="tab-ollama">🤖 AI Brain</button>
+          <button class="tab-btn" data-tab="tab-voice">🎙️ Voice & Audio</button>
+          <button class="tab-btn" data-tab="tab-stt">🌸 Offline STT</button>
+        </div>
+
+        <!-- Tab 1: Ollama Settings -->
+        <div id="tab-ollama" class="tab-pane active">
+          <!-- Ollama Status -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label>Ollama Server Status</label>
+              <span id="ollama-status-badge" class="badge badge-offline">Checking...</span>
+            </div>
+            <div class="server-url-display">Endpoint: <code>http://localhost:11434</code></div>
+          </div>
+
+          <!-- Model Selector -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="select-ollama-model">Active Ollama Model</label>
+              <button id="btn-refresh-models" class="small-link-btn">↻ Refresh</button>
+            </div>
+            <select id="select-ollama-model" class="styled-select">
+              <optgroup label="🌸 Ultra-Light (0.3B ~ 0.5B) - Best for Low-Spec Laptops">
+                <option value="qwen2.5:0.5b" selected>qwen2.5:0.5b (0.5B - ~398MB, Default Fast)</option>
+                <option value="smollm2:360m">smollm2:360m (0.36B - ~230MB, Ultra-Light)</option>
+                <option value="qwen2:0.5b">qwen2:0.5b (0.5B - ~350MB)</option>
+              </optgroup>
+              <optgroup label="⚡ Compact (1B ~ 2B) - Fast & Smart">
+                <option value="llama3.2:1b">llama3.2:1b (1B - ~1.3GB, Meta)</option>
+                <option value="qwen2.5:1.5b">qwen2.5:1.5b (1.5B - ~986MB, High Quality)</option>
+                <option value="deepseek-r1:1.5b">deepseek-r1:1.5b (1.5B - ~1.1GB, Reasoning)</option>
+                <option value="smollm2:1.7b">smollm2:1.7b (1.7B - ~1.0GB)</option>
+                <option value="gemma2:2b">gemma2:2b (2B - ~1.6GB, Google)</option>
+              </optgroup>
+              <optgroup label="💡 Balanced (3B ~ 4B) - Smarter Reasoning">
+                <option value="llama3.2:3b">llama3.2:3b (3B - ~2.0GB, Meta)</option>
+                <option value="qwen2.5:3b">qwen2.5:3b (3B - ~1.9GB)</option>
+                <option value="phi3.5:3.8b">phi3.5:3.8b (3.8B - ~2.2GB, Microsoft)</option>
+                <option value="phi4-mini:3.8b">phi4-mini:3.8b (3.8B - ~2.4GB)</option>
+              </optgroup>
+              <optgroup label="🧠 Heavy / High-IQ (7B ~ 8B) - For Powerful PCs">
+                <option value="qwen2.5:7b">qwen2.5:7b (7B - ~4.7GB, Top Tier)</option>
+                <option value="mistral:7b">mistral:7b (7B - ~4.1GB, Mistral AI)</option>
+                <option value="deepseek-r1:7b">deepseek-r1:7b (7B - ~4.7GB, Reasoning)</option>
+                <option value="llama3.1:8b">llama3.1:8b (8B - ~4.7GB, Meta Llama 3.1)</option>
+              </optgroup>
+            </select>
+            <p class="field-hint">Auto-detected from your local Ollama library or selected from presets.</p>
+          </div>
+
+          <!-- Pull New Model -->
+          <div class="setting-group">
+            <label for="input-pull-model">Pull Model to Laptop (0.3B to 7B)</label>
+            <div class="input-with-button">
+              <input type="text" id="input-pull-model" placeholder="e.g. qwen2.5:0.5b, llama3.2:1b" value="qwen2.5:0.5b" />
+              <button id="btn-pull-model" class="secondary-btn">Pull Model</button>
+            </div>
+            
+            <!-- Quick Model Preset Chips (0.3B to 7B) -->
+            <div class="quick-chips-wrap">
+              <span class="chips-label">Quick select:</span>
+              <button type="button" class="model-chip" data-model="smollm2:360m">0.36B smollm2</button>
+              <button type="button" class="model-chip active" data-model="qwen2.5:0.5b">0.5B qwen2.5</button>
+              <button type="button" class="model-chip" data-model="llama3.2:1b">1B llama3.2</button>
+              <button type="button" class="model-chip" data-model="qwen2.5:1.5b">1.5B qwen2.5</button>
+              <button type="button" class="model-chip" data-model="gemma2:2b">2B gemma2</button>
+              <button type="button" class="model-chip" data-model="llama3.2:3b">3B llama3.2</button>
+              <button type="button" class="model-chip" data-model="phi3.5:3.8b">3.8B phi3.5</button>
+              <button type="button" class="model-chip" data-model="qwen2.5:7b">7B qwen2.5</button>
+              <button type="button" class="model-chip" data-model="mistral:7b">7B mistral</button>
+            </div>
+            <div id="pull-status-msg" class="field-status-msg"></div>
+          </div>
+
+          <!-- Temperature -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="slider-temp">Cute Creativity: <span id="temp-val-display">0.70</span></label>
+            </div>
+            <input type="range" id="slider-temp" min="0" max="1" step="0.05" value="0.70" />
+            <p class="field-hint">Lower = straightforward, Higher = bubbly & creative.</p>
+          </div>
+
+          <!-- System Prompt -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="textarea-sysprompt">Rina-chan Personality Prompt</label>
+              <button id="btn-reset-sysprompt" class="small-link-btn">Reset Rina Prompt</button>
+            </div>
+            <textarea id="textarea-sysprompt" rows="3" class="styled-textarea">You are Rina Tennoji (Rina-chan), the cute, shy, and tech-savvy school idol from Nijigasaki High School! You express your feelings through your beloved digital Rina-chan Board. Occasionally include cute board expressions like "Rina-chan Board: Egao!" or "Rina-chan Board: Wakuwaku!". Keep your answers sweet, friendly, helpful, and concise (1-2 sentences) so they sound adorable spoken out loud!</textarea>
+          </div>
+        </div>
+
+        <!-- Tab 2: Voice & Audio Settings -->
+        <div id="tab-voice" class="tab-pane">
+          <!-- Mic Selector -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="select-microphone">Input Microphone</label>
+              <button id="btn-refresh-mics" class="small-link-btn">↻ Refresh</button>
+            </div>
+            <select id="select-microphone" class="styled-select">
+              <option value="">Default Microphone</option>
+            </select>
+          </div>
+
+          <!-- Voice Selector -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="select-tts-voice">Speech Voice</label>
+              <button id="btn-refresh-voices" class="small-link-btn">↻ Refresh</button>
+            </div>
+            <select id="select-tts-voice" class="styled-select">
+              <option value="default">Default System Voice</option>
+            </select>
+          </div>
+
+          <!-- Speech Speed Slider -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label for="slider-speech-speed">Speaking Speed: <span id="speed-val-display">1.0x</span></label>
+            </div>
+            <input type="range" id="slider-speech-speed" min="0.5" max="2.0" step="0.1" value="1.0" />
+          </div>
+
+          <!-- Auto-speak Replies Toggle -->
+          <div class="setting-group checkbox-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-autospeak" checked />
+              <span class="slider-toggle"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Auto-speak replies</span>
+              <span class="toggle-subtitle">Rina will read replies out loud automatically</span>
+            </div>
+          </div>
+
+          <!-- Edge-TTS Fallback Option -->
+          <div class="setting-group checkbox-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-edgetts" />
+              <span class="slider-toggle"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Edge-TTS Online Fallback</span>
+              <span class="toggle-subtitle">Enable online neural voice if local voice sounds robotic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: STT & Offline Settings -->
+        <div id="tab-stt" class="tab-pane">
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label>Whisper STT Model (ggml-tiny.en.bin)</label>
+              <span id="stt-status-badge" class="badge badge-checking">Checking...</span>
+            </div>
+            <p class="field-hint">Whisper.cpp runs 100% locally. Lightweight model (75 MB) optimized for fast inference on laptops.</p>
+            <div style="margin-top: 10px;">
+              <button id="btn-download-whisper" class="secondary-btn">Download / Verify STT Model (75 MB)</button>
+            </div>
+            <div id="stt-download-msg" class="field-status-msg"></div>
+          </div>
+
+          <div class="setting-group">
+            <label>100% Offline & Private</label>
+            <p class="field-hint">Your conversations with Rina-chan stay completely on your computer without going to external servers.</p>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button id="btn-save-settings" class="primary-btn">Save & Close ✨</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

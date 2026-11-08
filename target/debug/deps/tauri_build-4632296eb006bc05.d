@@ -1,0 +1,11 @@
+/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/deps/tauri_build-4632296eb006bc05.d: /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/lib.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/acl.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/manifest.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/mobile.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/windows-app-manifest.xml
+
+/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/deps/libtauri_build-4632296eb006bc05.rlib: /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/lib.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/acl.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/manifest.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/mobile.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/windows-app-manifest.xml
+
+/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/deps/libtauri_build-4632296eb006bc05.rmeta: /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/lib.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/acl.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/manifest.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/mobile.rs /home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/windows-app-manifest.xml
+
+/home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/lib.rs:
+/home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/acl.rs:
+/home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/manifest.rs:
+/home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/mobile.rs:
+/home/yume/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-build-2.7.4/src/windows-app-manifest.xml:

@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/cmake_install.cmake",
+		"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/cmake_install.cmake",
+		"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src/cmake_install.cmake",
+		"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src/ggml-cpu/cmake_install.cmake",
+		"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

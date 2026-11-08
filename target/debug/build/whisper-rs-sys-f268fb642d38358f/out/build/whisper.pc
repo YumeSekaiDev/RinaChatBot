@@ -1,0 +1,10 @@
+prefix=/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: whisper
+Description: Port of OpenAI's Whisper model in C/C++
+Version: 1.7.4
+Libs: -L${libdir} -lggml  -lggml-base -lwhisper
+Cflags: -I${includedir}

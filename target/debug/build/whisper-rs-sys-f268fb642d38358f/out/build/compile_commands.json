@@ -1,0 +1,98 @@
+[
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu11 -o CMakeFiles/ggml-base.dir/ggml.c.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml.c\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu11 -o CMakeFiles/ggml-base.dir/ggml-alloc.c.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-alloc.c\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-alloc.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/ggml-base.dir/ggml-backend.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-backend.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-backend.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/ggml-base.dir/ggml-opt.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-opt.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-opt.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/ggml-base.dir/ggml-threading.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-threading.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-threading.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_SCHED_MAX_COPIES=4 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu11 -o CMakeFiles/ggml-base.dir/ggml-quants.c.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-quants.c\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-quants.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu11 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-aarch64.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-aarch64.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-aarch64.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-aarch64.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-hbm.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-hbm.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-hbm.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-hbm.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu11 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-quants.c.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.c\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.c",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-quants.c.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-traits.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-traits.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-traits.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-traits.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_AARCH64 -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/..\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -march=native -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -std=gnu++17 -o CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-backend-reg.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/ggml-backend-reg.cpp",
+  "output": "ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o"
+},
+{
+  "directory": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/build/src",
+  "command": "/usr/bin/c++ -DGGML_USE_CPU -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/src/.\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/src/../include\" -I\"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/ggml/src/../include\"  -DWHISPER_DEBUG -ffunction-sections -fdata-sections -fPIC -m64 -march=x86-64 -w -O2 -g -DNDEBUG -o CMakeFiles/whisper.dir/whisper.cpp.o -c \"/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/src/whisper.cpp\"",
+  "file": "/mnt/UNTV News/Game Dev/VoiceChatRina/target/debug/build/whisper-rs-sys-f268fb642d38358f/out/whisper.cpp/src/whisper.cpp",
+  "output": "src/CMakeFiles/whisper.dir/whisper.cpp.o"
+}
+]

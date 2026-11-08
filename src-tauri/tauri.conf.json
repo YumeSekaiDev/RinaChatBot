@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Rina-chan Voice Chat",
+  "version": "1.0.0",
+  "identifier": "com.yume.rinachan",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Rina Tennoji // Rina-chan Board",
+        "width": 1000,
+        "height": 750,
+        "minWidth": 720,
+        "minHeight": 520,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis", "rpm", "deb", "appimage"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "wix": {
+        "language": "en-US"
+      },
+      "nsis": {
+        "languages": ["English"]
+      }
+    },
+    "rpm": {
+      "depends": [
+        "gtk3",
+        "webkit2gtk4.1",
+        "libayatana-appindicator",
+        "alsa-lib",
+        "speech-dispatcher",
+        "espeak-ng"
+      ]
+    }
+  }
+}
