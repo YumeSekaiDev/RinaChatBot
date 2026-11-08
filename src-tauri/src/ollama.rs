@@ -2,7 +2,7 @@ use crate::state::ChatMessage;
 use serde::{Deserialize, Serialize};
 use std::time::Duration;
 
-const OLLAMA_BASE_URL: &str = "http://localhost:11434";
+const OLLAMA_BASE_URL: &str = "http://127.0.0.1:11434";
 
 #[derive(Deserialize)]
 struct OllamaTagItem {
@@ -52,7 +52,7 @@ struct OllamaPullRequest<'a> {
 
 pub async fn check_ollama_status() -> bool {
     let client = match reqwest::Client::builder()
-        .timeout(Duration::from_secs(2))
+        .timeout(Duration::from_secs(5))
         .build()
     {
         Ok(c) => c,
@@ -69,7 +69,7 @@ pub async fn check_ollama_status() -> bool {
 
 pub async fn fetch_models() -> Result<Vec<String>, String> {
     let client = reqwest::Client::builder()
-        .timeout(Duration::from_secs(4))
+        .timeout(Duration::from_secs(10))
         .build()
         .map_err(|e| format!("Client creation error: {}", e))?;
 
@@ -77,7 +77,12 @@ pub async fn fetch_models() -> Result<Vec<String>, String> {
         .get(format!("{}/api/tags", OLLAMA_BASE_URL))
         .send()
         .await
-        .map_err(|_| "Ollama is not running. Run 'ollama serve'".to_string())?;
+        .map_err(|e| {
+            format!(
+                "Cannot connect to Ollama at {}. Is 'ollama serve' running? ({})",
+                OLLAMA_BASE_URL, e
+            )
+        })?;
 
     if !res.status().is_success() {
         return Err(format!("Ollama server error: HTTP {}", res.status()));
@@ -108,7 +113,12 @@ pub async fn pull_model(model_name: &str) -> Result<String, String> {
         .json(&payload)
         .send()
         .await
-        .map_err(|_| "Ollama is not running. Run 'ollama serve'".to_string())?;
+        .map_err(|e| {
+            format!(
+                "Cannot connect to Ollama at {}. Is 'ollama serve' running? ({})",
+                OLLAMA_BASE_URL, e
+            )
+        })?;
 
     if res.status().is_success() {
         Ok(format!("Model '{}' pulled successfully!", model_name))
@@ -168,7 +178,12 @@ pub async fn chat_completion(
         .json(&payload)
         .send()
         .await
-        .map_err(|_| "Ollama is not running. Run 'ollama serve'".to_string())?;
+        .map_err(|e| {
+            format!(
+                "Cannot connect to Ollama at {}. Is 'ollama serve' running? ({})",
+                OLLAMA_BASE_URL, e
+            )
+        })?;
 
     let status = res.status();
     if !status.is_success() {

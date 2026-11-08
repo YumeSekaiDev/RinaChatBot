@@ -1,4 +1,4 @@
-use crate::state::AppState;
+use crate::state::{AppState, SendableStream};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use cpal::{Sample, SampleFormat, StreamConfig};
 use std::sync::atomic::Ordering;
@@ -109,7 +109,7 @@ pub fn start_mic_recording(state: &AppState, device_name: Option<String>) -> Res
         .play()
         .map_err(|e| format!("Failed to start recording audio stream: {}", e))?;
 
-    *state.active_stream.lock().unwrap() = Some(stream);
+    *state.active_stream.lock().unwrap() = Some(SendableStream(stream));
     state.set_recording(true);
 
     Ok(())

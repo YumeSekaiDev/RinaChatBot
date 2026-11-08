@@ -139,15 +139,15 @@ pub fn transcribe_pcm(audio_16k_mono: &[f32]) -> Result<String, String> {
         .full(params, audio_16k_mono)
         .map_err(|e| format!("Whisper model inference failed: {:?}", e))?;
 
-    let num_segments = state
-        .full_n_segments()
-        .map_err(|e| format!("Failed to read transcription segments: {:?}", e))?;
+    let num_segments = state.full_n_segments();
 
     let mut text = String::new();
     for i in 0..num_segments {
-        if let Ok(segment) = state.full_get_segment_text(i) {
-            text.push_str(&segment);
-            text.push(' ');
+        if let Some(segment) = state.get_segment(i) {
+            if let Ok(s) = segment.to_str() {
+                text.push_str(s);
+                text.push(' ');
+            }
         }
     }
 

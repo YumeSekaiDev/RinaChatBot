@@ -29,7 +29,10 @@
       return ["Default Microphone (System Audio)"];
     }
     if (cmd === 'get_tts_voices') {
-      return [{ id: 'default', name: 'System Default Voice', language: 'auto' }];
+      return [{ id: 'default', name: 'Young Female Voice (en-us+f5)', language: 'en-us' }];
+    }
+    if (cmd === 'get_gptsovits_status') {
+      return false; // mock: server not running in browser preview
     }
     if (cmd === 'get_chat_history') {
       return [];
@@ -153,6 +156,10 @@
     sttStatusBadge: document.getElementById('stt-status-badge'),
     btnDownloadWhisper: document.getElementById('btn-download-whisper'),
     sttDownloadMsg: document.getElementById('stt-download-msg'),
+
+    // Rina Voice Clone (GPT-SoVITS)
+    rinaVoiceBadge: document.getElementById('rina-voice-badge'),
+    rinaVoiceMsg: document.getElementById('rina-voice-msg'),
 
     // Toasts
     toastContainer: document.getElementById('toast-container')
@@ -437,7 +444,7 @@
       console.error('Ollama Error:', err);
       const errMsg = String(err);
 
-      if (errMsg.includes('Ollama is not running') || errMsg.includes('connection refused')) {
+      if (errMsg.includes('Cannot connect to Ollama') || errMsg.includes('Ollama is not running') || errMsg.includes('connection refused')) {
         showAlertBanner("Ollama is not running. Run 'ollama serve' in your terminal.", "Retry", refreshOllamaStatus);
         showToast("Ollama is not running. Please start Ollama.", "error");
       } else if (errMsg.includes('not found')) {
@@ -633,6 +640,34 @@
     }
   }
 
+  // --- Rina Voice Clone (GPT-SoVITS) Status ---
+  async function checkRinaVoiceStatus() {
+    try {
+      const running = await invoke('get_gptsovits_status');
+      if (running) {
+        DOM.rinaVoiceBadge.className = 'badge badge-online';
+        DOM.rinaVoiceBadge.textContent = 'Online ✓';
+        DOM.rinaVoiceMsg.textContent = '🌸 Rina voice clone is active! Select "Rina Tennoji (Voice Clone)" in the voice list below.';
+        // Auto-refresh voice list so the Rina option appears
+        await refreshVoices();
+        // Auto-select Rina voice if none chosen yet
+        const rinaOpt = DOM.selectTtsVoice.querySelector('option[value="rina_gptsovits"]');
+        if (rinaOpt && !state.selectedVoice) {
+          DOM.selectTtsVoice.value = 'rina_gptsovits';
+          state.selectedVoice = 'rina_gptsovits';
+        }
+      } else {
+        DOM.rinaVoiceBadge.className = 'badge badge-offline';
+        DOM.rinaVoiceBadge.textContent = 'Offline';
+        DOM.rinaVoiceMsg.innerHTML = 'Start the voice server: <code>bash start-rina-tts.sh</code> in the project folder, then refresh voices.';
+      }
+    } catch (err) {
+      DOM.rinaVoiceBadge.className = 'badge badge-offline';
+      DOM.rinaVoiceBadge.textContent = 'Unavailable';
+      console.warn('Rina voice status check failed:', err);
+    }
+  }
+
   async function downloadWhisperModel() {
     DOM.btnDownloadWhisper.disabled = true;
     DOM.sttDownloadMsg.textContent = 'Downloading ggml-base.en.bin from HuggingFace (142MB)... Please wait.';
@@ -702,6 +737,7 @@
     refreshMicrophones();
     refreshVoices();
     checkWhisperStatus();
+    checkRinaVoiceStatus();
   }
 
   function closeSettingsModal() {
@@ -853,6 +889,7 @@
     await refreshMicrophones();
     await refreshVoices();
     await checkWhisperStatus();
+    await checkRinaVoiceStatus();
     setStatus('ready');
   }
 

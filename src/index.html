@@ -195,7 +195,7 @@
               <label>Ollama Server Status</label>
               <span id="ollama-status-badge" class="badge badge-offline">Checking...</span>
             </div>
-            <div class="server-url-display">Endpoint: <code>http://localhost:11434</code></div>
+            <div class="server-url-display">Endpoint: <code>http://127.0.0.1:11434</code></div>
           </div>
 
           <!-- Model Selector -->
@@ -278,6 +278,17 @@
 
         <!-- Tab 2: Voice & Audio Settings -->
         <div id="tab-voice" class="tab-pane">
+          <!-- Rina Voice Clone Status -->
+          <div class="setting-group">
+            <div class="group-label-row">
+              <label>🌸 Rina Voice Clone (GPT-SoVITS)</label>
+              <span id="rina-voice-badge" class="badge badge-checking">Checking...</span>
+            </div>
+            <div id="rina-voice-msg" class="field-status-msg">
+              Start the voice server with <code>bash start-rina-tts.sh</code> in the project folder, then select "🌸 Rina Tennoji (Voice Clone)" below.
+            </div>
+          </div>
+
           <!-- Mic Selector -->
           <div class="setting-group">
             <div class="group-label-row">

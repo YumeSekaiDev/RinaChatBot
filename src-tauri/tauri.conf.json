@@ -26,8 +26,8 @@
     }
   },
   "bundle": {
-    "active": true,
-    "targets": ["msi", "nsis", "rpm", "deb", "appimage"],
+    "active": false,
+    "targets": "all",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -42,16 +42,6 @@
       "nsis": {
         "languages": ["English"]
       }
-    },
-    "rpm": {
-      "depends": [
-        "gtk3",
-        "webkit2gtk4.1",
-        "libayatana-appindicator",
-        "alsa-lib",
-        "speech-dispatcher",
-        "espeak-ng"
-      ]
     }
   }
 }

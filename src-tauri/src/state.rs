@@ -4,6 +4,21 @@ use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::{Arc, Mutex};
 
+/// cpal::Stream is not Send on some platforms (e.g. ALSA on Linux uses a *mut ()),
+/// but it is safe to send across threads in practice for our use case.
+/// We wrap it to satisfy Tauri's `Send + Sync` requirement on managed state.
+pub struct SendableStream(pub Stream);
+// SAFETY: We only access the stream from a Mutex-guarded context.
+unsafe impl Send for SendableStream {}
+unsafe impl Sync for SendableStream {}
+
+/// rodio::OutputStream is not Send on some platforms (uses cpal internals with *mut ()).
+/// We wrap it to satisfy Tauri's `Send + Sync` requirement on managed state.
+pub struct SendableOutputStream(pub OutputStream);
+// SAFETY: We only access the stream from a Mutex-guarded context.
+unsafe impl Send for SendableOutputStream {}
+unsafe impl Sync for SendableOutputStream {}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ChatMessage {
     pub id: String,
@@ -29,7 +44,7 @@ pub struct StatusDto {
 
 pub struct AppState {
     pub audio_buffer: Arc<Mutex<Vec<f32>>>,
-    pub active_stream: Arc<Mutex<Option<Stream>>>,
+    pub active_stream: Arc<Mutex<Option<SendableStream>>>,
     pub stream_sample_rate: Arc<Mutex<u32>>,
     pub stream_channels: Arc<Mutex<u16>>,
     pub is_recording: Arc<AtomicBool>,
@@ -37,7 +52,7 @@ pub struct AppState {
     pub tts_instance: Arc<Mutex<Option<tts::Tts>>>,
     pub current_process: Arc<Mutex<Option<std::process::Child>>>,
     pub rodio_sink: Arc<Mutex<Option<Sink>>>,
-    pub rodio_stream: Arc<Mutex<Option<OutputStream>>>,
+    pub rodio_stream: Arc<Mutex<Option<SendableOutputStream>>>,
     pub history: Arc<Mutex<Vec<ChatMessage>>>,
 }
 
@@ -47,7 +62,7 @@ impl AppState {
         let (stream_opt, sink_opt) = match OutputStream::try_default() {
             Ok((stream, stream_handle)) => {
                 let sink = Sink::try_new(&stream_handle).ok();
-                (Some(stream), sink)
+                (Some(SendableOutputStream(stream)), sink)
             }
             Err(_) => (None, None),
         };

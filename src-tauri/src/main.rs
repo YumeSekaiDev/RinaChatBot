@@ -76,6 +76,12 @@ fn get_tts_voices(state: State<'_, AppState>) -> Result<Vec<VoiceDto>, String> {
     tts::list_voices(&state)
 }
 
+/// Returns true if the GPT-SoVITS Rina voice clone server is running and reachable.
+#[tauri::command]
+fn get_gptsovits_status() -> bool {
+    tts::is_gptsovits_running()
+}
+
 #[tauri::command]
 fn speak_text(
     state: State<'_, AppState>,
@@ -165,7 +171,8 @@ fn main() {
             save_chat_history,
             clear_chat_history,
             export_chat_history,
-            download_whisper_model
+            download_whisper_model,
+            get_gptsovits_status
         ])
         .run(tauri::generate_context!())
         .expect("error while running Jarvis Voice Chat tauri application");
